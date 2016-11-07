@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/smaximov/api_sampler.git
-  revision: 98b089e0fa35999a5eeaf7ba65173c1fd5d4a4e2
+  revision: 2122fe6b829bca744179a350900edb7accfc0a51
   specs:
     api_sampler (0.1.0)
       active_attr (~> 0.9)
@@ -52,7 +52,12 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (6.5.2)
+      execjs
     awesome_print (1.7.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -173,6 +178,7 @@ PLATFORMS
 DEPENDENCIES
   api_sampler!
   awesome_print
+  bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
