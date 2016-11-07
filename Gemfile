@@ -13,6 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'api_sampler', github: 'smaximov/api_sampler'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'slim-rails', '~> 3.1.1'
 
 group :development, :test do
   gem 'byebug', platform: :mri
