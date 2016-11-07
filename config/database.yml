@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: api_sampler_demo_<%= Rails.env %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  password: <%= ENV['API_SAMPLER_DEMO_DATABASE_PASSWORD'] %>
