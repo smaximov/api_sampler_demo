@@ -15,8 +15,7 @@ gem 'api_sampler', github: 'smaximov/api_sampler'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  # FIXME: get rid of therubyracer
-  gem 'therubyracer'
+  gem 'awesome_print'
 end
 
 group :development do
