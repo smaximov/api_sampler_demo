@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/smaximov/api_sampler.git
-  revision: 2122fe6b829bca744179a350900edb7accfc0a51
+  revision: 65ae148e3c1e94ee7d912f22bff2a627953d46e9
   specs:
     api_sampler (0.1.0)
       active_attr (~> 0.9)
