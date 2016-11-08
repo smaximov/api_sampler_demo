@@ -1,7 +1,30 @@
 section
-  h1 Config
+  h1 Overview
+
+  p
+    ' This is the demo app for the
+    a> href=api_sampler_source_url ApiSampler
+    ' gem. It is intended to explain basic usage of the gem along with some
+    a href="#config" configuration options
+    | .
+
+  .panel.panel-info
+    .panel-heading Info
+    .panel-body This app is reset daily.
+
+section
+  h1#config Config
+
+  p This app has ApiSampler configured with the following options:
 
   pre: code = api_sampler_config
+
+  .panel.panel-info
+    .panel-heading Info
+    .panel-body
+      ' See
+      a> href="http://www.rubydoc.info/github/smaximov/api_sampler/master/ApiSampler/Configuration" the docs
+      | for detailed information about configuration.
 
 section
   h1 Endpoints
