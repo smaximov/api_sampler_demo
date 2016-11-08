@@ -2,3 +2,82 @@ section
   h1 Config
 
   pre: code = api_sampler_config
+
+section
+  h1 Endpoints
+
+  p
+    | This app provides a simple RESTful resource named <code>Product</code> with
+      a single text field <code>name</code> in addition to the obligatory
+      <code>id</code> and timestamps.
+
+  h3
+    ' GET
+    code
+      | /api/v1/products
+
+  p Return a list of all products.
+
+  .panel.panel-default
+    .panel-heading
+      | Get all products.
+    .panel-body
+      pre
+        code = example_index
+
+  h3
+    ' POST
+    code
+      | /api/v1/products
+
+  p Create a new product.
+
+  .panel.panel-default
+    .panel-heading
+      | Create a new product with <code>name</code> &laquo;Cereal&raquo;.
+    .panel-body
+      pre
+        code = example_create
+
+  h3
+    ' GET
+    code
+      | /api/v1/products/:id
+
+  p Get a single product.
+
+  .panel.panel-default
+    .panel-heading
+      | Get the product with <code>id</code> &laquo;3&raquo;.
+    .panel-body
+      pre
+        code = example_show
+
+  h3
+    ' PATCH
+    code
+      | /api/v1/products/:id
+
+  p Update the product with the given <code>id</code>.
+
+  .panel.panel-default
+    .panel-heading
+      | Set <code>name</code> of the product with <code>id</code> &laquo;4&raquo; to
+        &laquo;Strawberry Milk&raquo;.
+    .panel-body
+      pre
+        code = example_update
+
+  h3
+    ' DELETE
+    code
+      | /api/v1/products/:id
+
+  p Delete the product with the given <code>id</code>.
+
+  .panel.panel-default
+    .panel-heading
+      | Delete the product with <code>id</code> &laquo;4&raquo;.
+    .panel-body
+      pre
+        code = example_delete
