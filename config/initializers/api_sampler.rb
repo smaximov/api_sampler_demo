@@ -11,4 +11,7 @@ ApiSampler.configure do |config|
   config.tag_with(:slow, color: 'red') do |request|
     request.env['api_sampler_demo.elapsed_time'] > 1.second
   end
+
+  # Limit collected samples to 10 samples per 5 minutes
+  config.samples_quota count: 10, per: 5.minutes
 end
