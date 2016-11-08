@@ -8,6 +8,13 @@ section
     a href="#config" configuration options
     | .
 
+  p
+    ' Go to
+    a> href="#endpoints" endpoints
+    ' to see which requests generate samples. Go to
+    a> href=api_sampler.root_path data-turbolinks="false" target="_blank" ApiSampler
+    | to manage collected samples.
+
   .panel.panel-info
     .panel-heading Info
     .panel-body This app is reset daily.
@@ -27,7 +34,7 @@ section
       | for detailed information about configuration.
 
 section
-  h1 Endpoints
+  h1#endpoints Endpoints
 
   p
     | This app provides a simple RESTful resource named <code>Product</code> with
