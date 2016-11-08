@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope 'api/v1', constaints: { format: :json }, defaults: { format: :json } do
+  scope 'api/v1', constraints: { format: :json }, defaults: { format: :json } do
     resources :products, except: %i(new edit)
   end
 
