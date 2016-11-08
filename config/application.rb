@@ -21,5 +21,23 @@ module ApiSamplerDemo
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    class MeasureRequestTime
+      def initialize(app)
+        @app = app
+      end
+
+      def call(env)
+        start = Time.now
+
+        @app.call(env).tap do
+          env['api_sampler_demo.elapsed_time'] = Time.now - start
+        end
+      end
+    end
+
+    initializer 'api_sampler_demo.add_measure_request_time_middleware' do |app|
+      app.middleware.insert_after ApiSampler::Middleware, MeasureRequestTime
+    end
   end
 end

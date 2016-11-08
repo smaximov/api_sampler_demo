@@ -41,6 +41,18 @@ section
       a single text field <code>name</code> in addition to the obligatory
       <code>id</code> and timestamps.
 
+  .panel.panel-info
+    .panel-heading Info
+    .panel-body
+      p
+        |
+          All endpoints accept a delay in seconds as the <code>sleep</code> query
+          parameter to simulate slow requests. The following example demonstrates how
+          to force the application to wait for two seconds before serving the request.
+
+      pre
+        code = example_slow
+
   h3
     ' GET
     code

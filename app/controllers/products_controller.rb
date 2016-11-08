@@ -1,4 +1,5 @@
 class ProductsController < ApiController
+  before_action :simulate_slow_request
   before_action :set_product, only: [:show, :update, :destroy]
 
   # GET /products
@@ -47,5 +48,10 @@ class ProductsController < ApiController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:name)
+    end
+
+    def simulate_slow_request
+      delay = Integer(params[:sleep], 10) rescue 0
+      sleep(delay) if delay > 0
     end
 end

@@ -6,4 +6,9 @@ ApiSampler.configure do |config|
 
   # Exclude the :format parameter from collected samples
   config.path_params_blacklist << :format
+
+  # Tag samples of requests which took more than 1 second to complete as slow
+  config.tag_with(:slow, color: 'red') do |request|
+    request.env['api_sampler_demo.elapsed_time'] > 1.second
+  end
 end

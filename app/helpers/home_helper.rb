@@ -47,4 +47,12 @@ module HomeHelper
           https://api-sampler-demo.herokuapp.com/api/v1/products/4
     EXAMPLE
   end
+
+  def example_slow
+    <<~EXAMPLE
+      $ curl -H "Content-Type: application/json" -X GET \\
+          https://api-sampler-demo.herokuapp.com/api/v1/products?sleep=2
+      [{"id":3,"name":"Cereal","created_at":"2016-11-08T12:01:16.922Z","updated_at":"2016-11-08T12:01:16.922Z","url":"https://api-sampler-demo.herokuapp.com/api/v1/products/3"},{"id":4,"name":"Milk","created_at":"2016-11-08T12:14:32.953Z","updated_at":"2016-11-08T12:14:32.953Z","url":"https://api-sampler-demo.herokuapp.com/api/v1/products/4"}]
+    EXAMPLE
+  end
 end
