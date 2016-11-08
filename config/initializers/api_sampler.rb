@@ -1,6 +1,5 @@
-# frozen_string_literal: true
+# File: config/initializers/api_sampler.rb
 
-# api_sampler configuration.
 ApiSampler.configure do |config|
   # Allow requests matching the given rule.
   #
