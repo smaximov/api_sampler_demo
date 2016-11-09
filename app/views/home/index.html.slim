@@ -24,7 +24,7 @@ section
 
   p This app has ApiSampler configured with the following options:
 
-  pre: code = api_sampler_config
+  pre: code.ruby = api_sampler_config
 
   .panel.panel-info
     .panel-heading Info
@@ -51,7 +51,7 @@ section
           to force the application to wait for two seconds before serving the request.
 
       pre
-        code = example_slow
+        code.bash = example_slow
 
   h3
     ' GET
@@ -65,7 +65,7 @@ section
       | Get all products.
     .panel-body
       pre
-        code = example_index
+        code.bash = example_index
 
   h3
     ' POST
@@ -79,7 +79,7 @@ section
       | Create a new product with <code>name</code> &laquo;Cereal&raquo;.
     .panel-body
       pre
-        code = example_create
+        code.bash = example_create
 
   h3
     ' GET
@@ -93,7 +93,7 @@ section
       | Get the product with <code>id</code> &laquo;3&raquo;.
     .panel-body
       pre
-        code = example_show
+        code.bash = example_show
 
   h3
     ' PATCH
@@ -108,7 +108,7 @@ section
         &laquo;Strawberry Milk&raquo;.
     .panel-body
       pre
-        code = example_update
+        code.bash = example_update
 
   h3
     ' DELETE
@@ -122,4 +122,4 @@ section
       | Delete the product with <code>id</code> &laquo;4&raquo;.
     .panel-body
       pre
-        code = example_delete
+        code.bash = example_delete
